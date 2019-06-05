@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class Search {
+public class SearchVolunteer {
 
     private boolean isAvaliableInTime(Volunteer volunteer) {
         if (volunteer.getBusy()) {

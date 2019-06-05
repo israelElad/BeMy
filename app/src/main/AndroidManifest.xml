@@ -26,7 +26,7 @@
         <activity android:name=".conect" />
         <activity android:name=".fromWereToWere" />
         <activity android:name=".chooseContactWay" />
-        <activity android:name=".Search" />
+        <activity android:name=".search" />
         <activity android:name=".beMyChoose"/>
         <activity android:name=".MainActivity">
             <intent-filter>
