@@ -10,14 +10,15 @@ public class Volunteer {
     private String name;
     private String phoneNumber;
     //help info
-    private Map availableFor;
-    private ArrayList<Date> availableWhen;
+    private Map<String, Boolean> availableFor;
+    private Map<Date, Date> availableWhen;
     //location info
     private String city;
 
 
 
-    public Volunteer(String name, String phoneNumber, Map availableFor, ArrayList<Date> availableWhen, String city) {
+    public Volunteer(String name, String phoneNumber, Map<String, Boolean> availableFor,
+                     Map<Date, Date> availableWhen, String city) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.availableFor = availableFor;
@@ -43,19 +44,19 @@ public class Volunteer {
         this.phoneNumber = phoneNumber;
     }
 
-    public Map getAvailableFor() {
+    public Map<String, Boolean> getAvailableFor() {
         return availableFor;
     }
 
-    public void setAvailableFor(Map avilableFor) {
+    public void setAvailableFor(Map<String, Boolean> avilableFor) {
         this.availableFor = avilableFor;
     }
 
-    public ArrayList<Date> getAvailableWhen() {
+    public Map<Date, Date> getAvailableWhen() {
         return availableWhen;
     }
 
-    public void setAvailableWhen(ArrayList<Date> avilableWhen) {
+    public void setAvailableWhen(Map<Date, Date> avilableWhen) {
         this.availableWhen = avilableWhen;
     }
 
