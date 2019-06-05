@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class Search {
+public class SearchVolunteer {
 
     private boolean isAvaliableInTime(Volunteer volunteer) {
         if (volunteer.getBusy()) {
@@ -24,8 +24,8 @@ public class Search {
     private Volunteer searchVolunteerForLegs(String city) {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
-            if (volunteers.get(i).getAvailableFor().get("call") &&
-                    volunteers.get(i).getAvailableFor().get("mission")) {
+            if (volunteers.get(i).getAvailableFor().get("callOrMessage") &&
+                    volunteers.get(i).getAvailableFor().get("Mission")) {
                 if (volunteers.get(i).getCity().equals(city)) {
                     if (isAvaliableInTime(volunteers.get(i))) {
                         volunteers.get(i).setBusy(true);
