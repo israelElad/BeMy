@@ -6,12 +6,12 @@ import java.util.Map;
 
 public class Seek {
 
-    boolean isAvaliableInTime(Volunteer volunteer){
+    private boolean isAvaliableInTime(Volunteer volunteer) {
         if (volunteer.getBusy()) {
             return false;
         }
         Date now = new Date();
-        Map<Date, Date> schedual =  volunteer.getAvailableWhen();
+        Map<Date, Date> schedual = volunteer.getAvailableWhen();
         for (Map.Entry<Date, Date> entry : schedual.entrySet()) {
             if (entry.getKey().before(now) && entry.getValue().after(now)) {
                 return true;
@@ -23,10 +23,10 @@ public class Seek {
     public Volunteer seekVolunteerForLegs(String city) {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
-            if(volunteers.get(i).getAvailableFor().get("call") &&
+            if (volunteers.get(i).getAvailableFor().get("call") &&
                     volunteers.get(i).getAvailableFor().get("mission")) {
-                if(volunteers.get(i).getCity().equals(city)) {
-                    if(isAvaliableInTime(volunteers.get(i))){
+                if (volunteers.get(i).getCity().equals(city)) {
+                    if (isAvaliableInTime(volunteers.get(i))) {
                         volunteers.get(i).setBusy(true);
                         return volunteers.get(i);
                     }
@@ -36,15 +36,17 @@ public class Seek {
         return null;
     }
 
-    public Volunteer seekVolunteerForEars() {
-        return null;
-    }
-
-    public Volunteer seekVolunteerForMouth() {
-        return null;
-    }
-
-    public Volunteer seekVolunteerForFriend() {
+    public Volunteer seekVolunteerForEarsMouthOrFriend() {
+        List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
+        for (int i = 0; i < volunteers.size(); i++) {
+            if (volunteers.get(i).getAvailableFor().get("call") &&
+                    volunteers.get(i).getAvailableFor().get("mission")) {
+                if (isAvaliableInTime(volunteers.get(i))) {
+                    volunteers.get(i).setBusy(true);
+                    return volunteers.get(i);
+                }
+            }
+        }
         return null;
     }
 }
