@@ -2,6 +2,8 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alex_brush</item>
+        <item>@font/amatic_sc_bold</item>
+        <item>@font/baloo_paaji</item>
         <item>@font/berkshire_swash</item>
     </array>
 </resources>
