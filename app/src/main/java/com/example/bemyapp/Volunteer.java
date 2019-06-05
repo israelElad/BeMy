@@ -3,25 +3,25 @@ package com.example.bemyapp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
-import java.util.TreeMap;
+
 
 public class Volunteer {
     //personal info
     private String name;
     private String phoneNumber;
     //help info
-    private TreeMap<String, Boolean> avilableFor;
-    private ArrayList<Date> avilableWhen;
+    private Map availableFor;
+    private ArrayList<Date> availableWhen;
     //location info
     private String city;
 
 
 
-    public Volunteer(String name, String phoneNumber, TreeMap<String, Boolean> avilableFor, ArrayList<Date> avilableWhen, String city) {
+    public Volunteer(String name, String phoneNumber, Map availableFor, ArrayList<Date> availableWhen, String city) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.avilableFor = avilableFor;
-        this.avilableWhen = avilableWhen;
+        this.availableFor = availableFor;
+        this.availableWhen = availableWhen;
         this.city = city;
 
     }
@@ -43,20 +43,20 @@ public class Volunteer {
         this.phoneNumber = phoneNumber;
     }
 
-    public TreeMap<String, Boolean> getAvilableFor() {
-        return avilableFor;
+    public Map getAvailableFor() {
+        return availableFor;
     }
 
-    public void setAvilableFor(TreeMap<String, Boolean> avilableFor) {
-        this.avilableFor = avilableFor;
+    public void setAvailableFor(Map avilableFor) {
+        this.availableFor = avilableFor;
     }
 
-    public ArrayList<Date> getAvilableWhen() {
-        return avilableWhen;
+    public ArrayList<Date> getAvailableWhen() {
+        return availableWhen;
     }
 
-    public void setAvilableWhen(ArrayList<Date> avilableWhen) {
-        this.avilableWhen = avilableWhen;
+    public void setAvailableWhen(ArrayList<Date> avilableWhen) {
+        this.availableWhen = avilableWhen;
     }
 
     public String getCity() {
@@ -67,5 +67,17 @@ public class Volunteer {
         this.city = city;
     }
 
+   /* //@androidx.annotation.NonNull
+    @Override
+    public String toString() {
+       // Gson gson=new Gson();
+        // return gson.toJson(this);
+        return new String("Name: "+name+", "
+               + "Phone: "+ phoneNumber +", "
+                + "Call: "+ availableFor.get() +", "
+                + "Message: "+ availableFor.get() +", "
 
+                + "City: "+ phoneNumber +", "
+        );
+    }*/
 }
