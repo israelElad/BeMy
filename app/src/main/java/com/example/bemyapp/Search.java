@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class Seek {
+public class Search {
 
     private boolean isAvaliableInTime(Volunteer volunteer) {
         if (volunteer.getBusy()) {
@@ -20,7 +20,7 @@ public class Seek {
         return false;
     }
 
-    public Volunteer seekVolunteerForLegs(String city) {
+    public Volunteer searchVolunteerForLegs(String city) {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
             if (volunteers.get(i).getAvailableFor().get("call") &&
@@ -36,7 +36,7 @@ public class Seek {
         return null;
     }
 
-    public Volunteer seekVolunteerForEarsMouthOrFriend() {
+    public Volunteer searchVolunteerForEarsMouth() {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
             if (volunteers.get(i).getAvailableFor().get("call") &&
@@ -48,5 +48,12 @@ public class Seek {
             }
         }
         return null;
+    }
+
+    public Volunteer searchVolunteerForFriend(String city){
+        Volunteer volunteer = searchVolunteerForLegs(city);
+        if (volunteer != null) { return volunteer;}
+        volunteer = searchVolunteerForEarsMouth();
+        return volunteer;
     }
 }
