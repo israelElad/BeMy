@@ -76,17 +76,34 @@ public class Volunteer {
     }
    /* //@androidx.annotation.NonNull
    /*
-    name,phone,callOrMessage,Mission,city
+    name,phone,callOrMessage,Mission,city,startDate
+    //date to string
+    //dow mon dd hh:mm:ss zzz yyyy
+    StringBuilder str= new StringBuilder();
+        for (Map.Entry<Date,Date> entry : availableWhen.entrySet()){
+            str.append(entry.getKey().toString()).append(",").append(entry.getValue().toString()).append(",");
+        }
+
+    //string to date
+            String target = "Thu Sep 28 20:29:30 JST 2000";
+            DateFormat df = new SimpleDateFormat("EEE MMM dd kk:mm:ss zzz yyyy");
+            Date result =  df.parse(target);
     */
     @Override
     public String toString() {
         // Gson gson=new Gson();
         // return gson.toJson(this);
-        return name + ","
+        StringBuilder str= new StringBuilder();
+        for (Map.Entry<Date,Date> entry : availableWhen.entrySet()){
+            str.append(entry.getKey().toString()).append(",").append(entry.getValue().toString()).append(",");
+        }
+
+        return    name + ","
                 + phoneNumber +","
                 + availableFor.get("callOrMessage") +","
                 + availableFor.get("Mission") +","
-                + city;
+                + city+","
+                + str.toString();
 
     }
 }
