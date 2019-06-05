@@ -32,6 +32,36 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/mouthButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/mouth" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:onClick="beMyFriendClick"
+                app:srcCompat="@drawable/man" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
                 android:id="@+id/earButton7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,35 +84,6 @@
                 app:srcCompat="@drawable/foot" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/mouthButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFFFFF"
-                app:srcCompat="@drawable/mouth" />
-
-            <ImageButton
-                android:id="@+id/imageButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#00FFFFFF"
-                android:onClick="beMyFriendClick"
-                app:srcCompat="@drawable/man" />
-        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
