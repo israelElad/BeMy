@@ -10,14 +10,14 @@ public class Volunteer {
     private String name;
     private String phoneNumber;
     //help info
-    private Map availableFor;
-    private ArrayList<Date> availableWhen;
+    private Map<String, Boolean> availableFor;
+    private Map<Date, Date> availableWhen;
     //location info
     private String city;
+    private Boolean isBusy=false;
 
-
-
-    public Volunteer(String name, String phoneNumber, Map availableFor, ArrayList<Date> availableWhen, String city) {
+    public Volunteer(String name, String phoneNumber, Map<String, Boolean> availableFor,
+                     Map<Date, Date> availableWhen, String city) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.availableFor = availableFor;
@@ -43,19 +43,19 @@ public class Volunteer {
         this.phoneNumber = phoneNumber;
     }
 
-    public Map getAvailableFor() {
+    public Map<String, Boolean> getAvailableFor() {
         return availableFor;
     }
 
-    public void setAvailableFor(Map avilableFor) {
+    public void setAvailableFor(Map<String, Boolean> avilableFor) {
         this.availableFor = avilableFor;
     }
 
-    public ArrayList<Date> getAvailableWhen() {
+    public Map<Date, Date> getAvailableWhen() {
         return availableWhen;
     }
 
-    public void setAvailableWhen(ArrayList<Date> avilableWhen) {
+    public void setAvailableWhen(Map<Date, Date> avilableWhen) {
         this.availableWhen = avilableWhen;
     }
 
@@ -67,17 +67,26 @@ public class Volunteer {
         this.city = city;
     }
 
+    public Boolean getBusy() {
+        return isBusy;
+    }
+
+    public void setBusy(Boolean busy) {
+        isBusy = busy;
+    }
    /* //@androidx.annotation.NonNull
+   /*
+    name,phone,callOrMessage,Mission,city
+    */
     @Override
     public String toString() {
-       // Gson gson=new Gson();
+        // Gson gson=new Gson();
         // return gson.toJson(this);
-        return new String("Name: "+name+", "
-               + "Phone: "+ phoneNumber +", "
-                + "Call: "+ availableFor.get() +", "
-                + "Message: "+ availableFor.get() +", "
+        return name + ","
+                + phoneNumber +","
+                + availableFor.get("callOrMessage") +","
+                + availableFor.get("Mission") +","
+                + city;
 
-                + "City: "+ phoneNumber +", "
-        );
-    }*/
+    }
 }

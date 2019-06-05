@@ -23,6 +23,9 @@ public class Info {
     }
     public void addVolunteer(){}
     public void removeVolunteer(){}
-    public void getVolunteersList(){}
+
+    public List<Volunteer> getVolunteersList(){
+        return this.volunteersList;
+    }
 
 }
