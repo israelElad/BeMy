@@ -10,14 +10,18 @@ public class Volunteer {
     private String name;
     private String phoneNumber;
     //help info
-    private Map availableFor;
+    private Map<String,Boolean> availableFor;
     private ArrayList<Date> availableWhen;
     //location info
     private String city;
 
 
 
-    public Volunteer(String name, String phoneNumber, Map availableFor, ArrayList<Date> availableWhen, String city) {
+    private Boolean isBusy =false;
+
+
+
+    public Volunteer(String name, String phoneNumber, Map<String,Boolean> availableFor, ArrayList<Date> availableWhen, String city) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.availableFor = availableFor;
@@ -47,8 +51,8 @@ public class Volunteer {
         return availableFor;
     }
 
-    public void setAvailableFor(Map avilableFor) {
-        this.availableFor = avilableFor;
+    public void setAvailableFor(Map<String,Boolean> availableFor) {
+        this.availableFor = availableFor;
     }
 
     public ArrayList<Date> getAvailableWhen() {
@@ -66,18 +70,27 @@ public class Volunteer {
     public void setCity(String city) {
         this.city = city;
     }
+    public Boolean getIsBusy() {
+        return isBusy;
+    }
 
-   /* //@androidx.annotation.NonNull
+    public void setIsBusy(Boolean busy) {
+        isBusy = busy;
+    }
+
+    /*
+        name,phone,CallOrChat,Mission,city
+     */
+   //@androidx.annotation.NonNull
     @Override
     public String toString() {
        // Gson gson=new Gson();
         // return gson.toJson(this);
-        return new String("Name: "+name+", "
-               + "Phone: "+ phoneNumber +", "
-                + "Call: "+ availableFor.get() +", "
-                + "Message: "+ availableFor.get() +", "
+        return name+","
+               + phoneNumber +","
+                + availableFor.get("CallOrChat") +","
+                + availableFor.get("Mission") +","
+                + city ;
 
-                + "City: "+ phoneNumber +", "
-        );
-    }*/
+    }
 }
