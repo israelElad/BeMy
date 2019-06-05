@@ -19,7 +19,7 @@ public class chooseContactWay extends AppCompatActivity {
 
     public void initiateCall(View view) {
         Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:" + "XXXXXX"));//change the number.
+        callIntent.setData(Uri.parse("tel:" + "0500000000"));//change the number.
         callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

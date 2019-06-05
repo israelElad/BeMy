@@ -29,7 +29,7 @@
             android:textColor="#410552"
             android:textSize="200px" />
 
-        <ImageView
+        <pl.droidsonroids.gif.GifImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

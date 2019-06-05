@@ -15,8 +15,30 @@ public class beMyChoose extends AppCompatActivity {
 
     public void beMyFriendClick(View view)
     {
-        Intent intent = new Intent(beMyChoose.this, chooseContactWay.class);
+        Intent intent = new Intent(beMyChoose.this, search.class);
+        intent.putExtra("BeMy","Friend");
         startActivity(intent);
     }
+
+    public void beMyMouthClick(View view)
+    {
+        Intent intent = new Intent(beMyChoose.this, search.class);
+        intent.putExtra("BeMy","Mouth");
+        startActivity(intent);
+    }
+
+    public void beMyLegClick(View view)
+    {
+        Intent intent = new Intent(beMyChoose.this, search.class);
+        intent.putExtra("BeMy","Leg");
+        startActivity(intent);
+    }
+    public void beMyEarClick(View view)
+    {
+        Intent intent = new Intent(beMyChoose.this, search.class);
+        intent.putExtra("BeMy","Ear");
+        startActivity(intent);
+    }
+
 
 }
