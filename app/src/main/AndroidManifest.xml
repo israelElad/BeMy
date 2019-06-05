@@ -9,7 +9,7 @@
         android:theme="@android:style/Theme.NoTitleBar"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        >
+         >
 
         <activity android:name=".chooseContactWay"></activity>
         <activity android:name=".search" />
