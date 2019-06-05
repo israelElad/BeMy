@@ -1,3 +1,5 @@
+package com.example.bemyapp;
+
 public class Info {
 
     public void addVolunteer();
