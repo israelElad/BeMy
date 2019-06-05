@@ -24,8 +24,8 @@ public class SearchVolunteer {
     private Volunteer searchVolunteerForLegs(String city) {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
-            if (volunteers.get(i).getAvailableFor().get("call") &&
-                    volunteers.get(i).getAvailableFor().get("mission")) {
+            if (volunteers.get(i).getAvailableFor().get("callOrMessage") &&
+                    volunteers.get(i).getAvailableFor().get("Mission")) {
                 if (volunteers.get(i).getCity().equals(city)) {
                     if (isAvaliableInTime(volunteers.get(i))) {
                         volunteers.get(i).setBusy(true);
