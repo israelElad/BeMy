@@ -21,7 +21,6 @@ public class Info {
 
         return instance;
     }
-
     public void addVolunteer(){}
     public void removeVolunteer(){}
     public void getVolunteersList(){}
