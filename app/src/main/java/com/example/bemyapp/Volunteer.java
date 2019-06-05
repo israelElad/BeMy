@@ -23,7 +23,7 @@ public class Volunteer {
         this.avilableFor = avilableFor;
         this.avilableWhen = avilableWhen;
         this.city = city;
-        
+
     }
 
 
