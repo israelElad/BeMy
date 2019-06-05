@@ -10,14 +10,14 @@ public class Volunteer {
     private String name;
     private String phoneNumber;
     //help info
-    private TreeMap avilableFor;
+    private TreeMap<String, Boolean> avilableFor;
     private ArrayList<Date> avilableWhen;
     //location info
     private String city;
 
 
 
-    public Volunteer(String name, String phoneNumber, TreeMap avilableFor, ArrayList<Date> avilableWhen, String city) {
+    public Volunteer(String name, String phoneNumber, TreeMap<String, Boolean> avilableFor, ArrayList<Date> avilableWhen, String city) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.avilableFor = avilableFor;
@@ -43,11 +43,11 @@ public class Volunteer {
         this.phoneNumber = phoneNumber;
     }
 
-    public TreeMap getAvilableFor() {
+    public TreeMap<String, Boolean> getAvilableFor() {
         return avilableFor;
     }
 
-    public void setAvilableFor(TreeMap avilableFor) {
+    public void setAvilableFor(TreeMap<String, Boolean> avilableFor) {
         this.avilableFor = avilableFor;
     }
 
