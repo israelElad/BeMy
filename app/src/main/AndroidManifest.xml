@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.bemyapp">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -11,9 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".register"></activity>
-        <activity android:name=".updata" />
+        <activity android:name=".update" />
         <activity android:name=".delete" />
         <activity android:name=".update_or_delete" />
         <activity android:name=".beFor" />
@@ -21,10 +23,8 @@
         <activity android:name=".conect" />
         <activity android:name=".fromWereToWere" />
         <activity android:name=".chooseContactWay" />
-        <activity android:name=".search" />
-        <activity
-            android:name=".beMyChoose"
-            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Search" />
+        <activity android:name=".beMyChoose"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/volunteer2"
-    tools:context=".updata">
+    tools:context=".update">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/baloo_paaji"
-            android:text="Successfully updata"
+            android:text="Successfully update"
             android:textAlignment="center"
             android:textColor="#410552"
             android:textSize="50dp" />
