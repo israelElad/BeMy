@@ -16,14 +16,13 @@ public class Volunteer {
     private String city;
     private Boolean isBusy=false;
 
-    public Volunteer(String name, String phoneNumber, Map<String, Boolean> availableFor,
-                     Map<Date, Date> availableWhen, String city) {
+    public Volunteer(String name, String phoneNumber, Map<String, Boolean> availableFor,String city
+                     ,Map<Date, Date> availableWhen) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.availableFor = availableFor;
-        this.availableWhen = availableWhen;
         this.city = city;
-
+        this.availableWhen = availableWhen;
     }
 
 
