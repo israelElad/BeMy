@@ -10,18 +10,15 @@ public class Volunteer {
     private String name;
     private String phoneNumber;
     //help info
-    private Map<String,Boolean> availableFor;
-    private ArrayList<Date> availableWhen;
+    private Map<String, Boolean> availableFor;
+    private Map<Date, Date> availableWhen;
     //location info
     private String city;
 
 
 
-    private Boolean isBusy =false;
-
-
-
-    public Volunteer(String name, String phoneNumber, Map<String,Boolean> availableFor, ArrayList<Date> availableWhen, String city) {
+    public Volunteer(String name, String phoneNumber, Map<String, Boolean> availableFor,
+                     Map<Date, Date> availableWhen, String city) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.availableFor = availableFor;
@@ -47,19 +44,19 @@ public class Volunteer {
         this.phoneNumber = phoneNumber;
     }
 
-    public Map getAvailableFor() {
+    public Map<String, Boolean> getAvailableFor() {
         return availableFor;
     }
 
-    public void setAvailableFor(Map<String,Boolean> availableFor) {
-        this.availableFor = availableFor;
+    public void setAvailableFor(Map<String, Boolean> avilableFor) {
+        this.availableFor = avilableFor;
     }
 
-    public ArrayList<Date> getAvailableWhen() {
+    public Map<Date, Date> getAvailableWhen() {
         return availableWhen;
     }
 
-    public void setAvailableWhen(ArrayList<Date> avilableWhen) {
+    public void setAvailableWhen(Map<Date, Date> avilableWhen) {
         this.availableWhen = avilableWhen;
     }
 
@@ -70,27 +67,18 @@ public class Volunteer {
     public void setCity(String city) {
         this.city = city;
     }
-    public Boolean getIsBusy() {
-        return isBusy;
-    }
 
-    public void setIsBusy(Boolean busy) {
-        isBusy = busy;
-    }
-
-    /*
-        name,phone,CallOrChat,Mission,city
-     */
-   @androidx.annotation.NonNull
+   /* //@androidx.annotation.NonNull
     @Override
     public String toString() {
        // Gson gson=new Gson();
         // return gson.toJson(this);
-        return name+","
-               + phoneNumber +","
-                + availableFor.get("CallOrChat") +","
-                + availableFor.get("Mission") +","
-                + city ;
+        return new String("Name: "+name+", "
+               + "Phone: "+ phoneNumber +", "
+                + "Call: "+ availableFor.get() +", "
+                + "Message: "+ availableFor.get() +", "
 
-    }
+                + "City: "+ phoneNumber +", "
+        );
+    }*/
 }
