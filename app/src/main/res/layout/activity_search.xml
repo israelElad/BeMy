@@ -37,6 +37,6 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@drawable/search" />
+            android:src="@drawable/search" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
