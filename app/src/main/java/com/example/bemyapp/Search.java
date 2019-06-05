@@ -1,5 +1,6 @@
 package com.example.bemyapp;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class Search {
         return false;
     }
 
-    public Volunteer searchVolunteerForLegs(String city) {
+    private Volunteer searchVolunteerForLegs(String city) {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
             if (volunteers.get(i).getAvailableFor().get("call") &&
@@ -36,7 +37,7 @@ public class Search {
         return null;
     }
 
-    public Volunteer searchVolunteerForEarsMouth() {
+    private Volunteer searchVolunteerForEarsOrMouth() {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
             if (volunteers.get(i).getAvailableFor().get("call") &&
@@ -50,10 +51,52 @@ public class Search {
         return null;
     }
 
-    public Volunteer searchVolunteerForFriend(String city){
+    private Volunteer searchVolunteerForFriend(String city){
         Volunteer volunteer = searchVolunteerForLegs(city);
         if (volunteer != null) { return volunteer;}
-        volunteer = searchVolunteerForEarsMouth();
+        volunteer = searchVolunteerForEarsOrMouth();
         return volunteer;
+    }
+
+    public List<Volunteer> getVolunteersForLegs(String city) {
+        List<Volunteer> volunteerList = new ArrayList<Volunteer>();
+        for(int i = 0; i < 3; i++) {
+            if (searchVolunteerForLegs(city) == null) {
+                break;
+            }
+            volunteerList.add(searchVolunteerForLegs(city));
+        }
+        if (volunteerList.isEmpty()) {
+            return null;
+        }
+        return volunteerList;
+    }
+
+    public List<Volunteer> getVolunteersForEarsOrMouth() {
+        List<Volunteer> volunteerList = new ArrayList<Volunteer>();
+        for(int i = 0; i < 3; i++) {
+            if (searchVolunteerForEarsOrMouth() == null) {
+                break;
+            }
+            volunteerList.add(searchVolunteerForEarsOrMouth());
+        }
+        if (volunteerList.isEmpty()) {
+            return null;
+        }
+        return volunteerList;
+    }
+
+    public List<Volunteer> getVolunteersForFriend(String city) {
+        List<Volunteer> volunteerList = new ArrayList<Volunteer>();
+        for(int i = 0; i < 3; i++) {
+            if (searchVolunteerForFriend(city) == null) {
+                break;
+            }
+            volunteerList.add(searchVolunteerForFriend(city));
+        }
+        if (volunteerList.isEmpty()) {
+            return null;
+        }
+        return volunteerList;
     }
 }
