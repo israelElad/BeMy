@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".beFor"></activity>
+        <activity android:name=".register"></activity>
+        <activity android:name=".updata" />
+        <activity android:name=".delete" />
+        <activity android:name=".update_or_delete" />
+        <activity android:name=".beFor" />
         <activity android:name=".conect" />
         <activity android:name=".fromWereToWere" />
         <activity android:name=".chooseContactWay" />
