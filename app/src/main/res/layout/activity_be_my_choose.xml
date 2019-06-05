@@ -37,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#00FFFFFF"
                 app:srcCompat="@drawable/ear" />
 
@@ -46,10 +46,10 @@
                 android:id="@+id/footButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="#00FFFFFF"
                 app:srcCompat="@drawable/foot" />
         </LinearLayout>
@@ -65,8 +65,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 app:srcCompat="@drawable/mouth" />
@@ -75,11 +75,12 @@
                 android:id="@+id/imageButton9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="#00FFFFFF"
+                android:onClick="beMyFriendClick"
                 app:srcCompat="@drawable/man" />
         </LinearLayout>
     </LinearLayout>

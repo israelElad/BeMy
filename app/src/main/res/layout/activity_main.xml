@@ -28,6 +28,7 @@
 
             android:background="#410552"
             android:fontFamily="@font/baloo_paaji"
+            android:onClick="beMyClick"
             android:text="be my "
             android:textColor="#FFEBEE"
             android:textSize="100px"

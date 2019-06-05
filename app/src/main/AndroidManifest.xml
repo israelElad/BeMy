@@ -10,10 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".CallChatChoiceActivity"></activity>
         <activity android:name=".chooseContactWay"></activity>
         <activity android:name=".search" />
-        <activity android:name=".beMyChoose" />
+        <activity android:name=".beMyChoose" android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

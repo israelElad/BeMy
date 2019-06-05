@@ -13,8 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goToChoice(View view){
-        Intent intent = new Intent(this, CallChatChoiceActivity.class);
+    public void beMyClick(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, beMyChoose.class);
         startActivity(intent);
     }
 }

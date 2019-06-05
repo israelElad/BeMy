@@ -13,9 +13,9 @@ public class Seek {
     public Volunteer seekVolunteerForLegs() {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
-            if ((volunteers.get(i).getAvilableFor().get("call") == null) &&
-                    volunteers.get(i).getAvilableFor().get("call") &&
-                    volunteers.get(i).getAvilableFor().get("mission")) {
+            if ((volunteers.get(i).getAvailableFor().get("call") == null) &&
+                    volunteers.get(i).getAvailableFor().get("call") &&
+                    volunteers.get(i).getAvailableFor().get("mission")) {
                 //TODO: BLA
             }
         }

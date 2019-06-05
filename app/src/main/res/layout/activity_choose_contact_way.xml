@@ -37,7 +37,7 @@
             android:text="name"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="50" />
+            android:textSize="50dp" />
 
         <TextView
             android:id="@+id/phon"
@@ -50,7 +50,7 @@
             android:fontFamily="@font/baloo_paaji"
             android:text="phone number"
             android:textAlignment="center"
-            android:textSize="40" />
+            android:textSize="40dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,6 +69,7 @@
 
                 android:layout_marginBottom="5dp"
                 android:background="#FFFFFF"
+                android:onClick="initiateCall"
                 app:srcCompat="@drawable/phon" />
 
             <ImageButton
@@ -80,6 +81,7 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="#FFFFFF"
+                android:onClick="initiateSMS"
                 app:srcCompat="@drawable/massage" />
         </LinearLayout>
     </LinearLayout>
