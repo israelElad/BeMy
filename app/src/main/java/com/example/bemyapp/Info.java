@@ -26,8 +26,8 @@ public class Info {
         return instance;
     }
 
-    public void addVolunteer(String name, String phoneNumber, Map<String, Boolean> availableFor,
-                             Map<Date, Date> availableWhen, String city){
+    public void addVolunteer(String name, String phoneNumber, Map<String, Boolean> availableFor, String city,
+                             Map<Date, Date> availableWhen){
         Volunteer volunteer = new Volunteer(name, phoneNumber, availableFor, city, availableWhen);
         volunteersList.add(volunteer);
     }
@@ -47,6 +47,10 @@ public class Info {
 
     public List<Volunteer> getVolunteersList(){
         return volunteersList;
+    }
+
+    public void setVolunteersList(List<Volunteer> volunteersList) {
+        this.volunteersList = volunteersList;
     }
 
     public Boolean getIsInSearching() {
