@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void beForClick(View view)
     {
-        Intent intent = new Intent(MainActivity.this, ---------.class);
+        Intent intent = new Intent(MainActivity.this, registration_form.class);
         startActivity(intent);
     }
 }
