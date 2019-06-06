@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         availableFor.put("callOrMessage", true);
         availableFor.put("Mission", true);
         Map<Date, Date> availableWhen = new HashMap<>();
-        availableWhen.put(volunteerDataBase.toDate("Thu Jun 06 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 06 02:40:00 GMT 2019"));
-        Info.getInstance().addVolunteer("Yael", "0544736473", availableFor, "Tel-Aviv", availableWhen);
+        availableWhen.put(volunteerDataBase.toDate("Thu Jun 06 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 06 03:40:00 GMT 2019"));
+        Info.getInstance().addVolunteer(new Volunteer("Yael", "0544736473", availableFor, "Tel-Aviv", availableWhen));
         /*
         // narkis's check
         VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
