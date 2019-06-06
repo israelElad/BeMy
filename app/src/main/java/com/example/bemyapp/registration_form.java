@@ -39,7 +39,7 @@ public class registration_form extends AppCompatActivity {
         Map<String,Boolean> availableFor =new TreeMap<String,Boolean>();
         availableFor.put("callOrMessage",callAndMessage);
         availableFor.put("Mission",errand);
-
+try {
     Map<Date, Date> availableWhen = new HashMap<>();
     availableWhen.put(volunteerDataBase.toDate("Thu Jun 06 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 06 10:40:00 GMT 2019"));
     availableWhen.put(volunteerDataBase.toDate("Thu Jun 07 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 07 10:40:00 GMT 2019"));
@@ -48,9 +48,9 @@ public class registration_form extends AppCompatActivity {
     Info.getInstance().addVolunteer(volunteer);
     Intent intent=new Intent(registration_form.this , register.class);
     startActivity(intent);
+}catch(Exception e){
 
-
-    }
+    }}
 
     public String viewToString(View view){
         EditText editText = (EditText) view;
