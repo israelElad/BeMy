@@ -45,6 +45,7 @@
             android:layout_marginBottom="5dp"
             android:background="#410552"
             android:fontFamily="@font/baloo_paaji"
+            android:onClick="beForClick"
             android:text="Be for"
             android:textColor="#FFEBEE"
             android:textSize="100px" />
