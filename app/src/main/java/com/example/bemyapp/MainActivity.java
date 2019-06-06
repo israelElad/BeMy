@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onStop() {
+        super.onStop();
+        VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
+        volunteerDataBase.loadFromFile();
     }
 
     public void beMyClick(View view)
