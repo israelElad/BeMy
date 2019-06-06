@@ -40,8 +40,8 @@ public class SearchVolunteer {
     private Volunteer searchVolunteerForEarsOrMouth() {
         List<Volunteer> volunteers = Info.getInstance().getVolunteersList();
         for (int i = 0; i < volunteers.size(); i++) {
-            if (volunteers.get(i).getAvailableFor().get("call") &&
-                    volunteers.get(i).getAvailableFor().get("mission")) {
+            if (volunteers.get(i).getAvailableFor().get("callOrMessage") &&
+                    volunteers.get(i).getAvailableFor().get("Mission")) {
                 if (isAvaliableInTime(volunteers.get(i))) {
                     volunteers.get(i).setBusy(true);
                     return volunteers.get(i);
@@ -61,10 +61,11 @@ public class SearchVolunteer {
     public List<Volunteer> getVolunteersForLegs(String city) {
         List<Volunteer> volunteerList = new ArrayList<Volunteer>();
         for(int i = 0; i < 3; i++) {
-            if (searchVolunteerForLegs(city) == null) {
+            Volunteer newVol = searchVolunteerForLegs(city);
+            if ( newVol == null) {
                 break;
             }
-            volunteerList.add(searchVolunteerForLegs(city));
+            volunteerList.add(newVol);
         }
         if (volunteerList.isEmpty()) {
             return null;
@@ -75,10 +76,11 @@ public class SearchVolunteer {
     public List<Volunteer> getVolunteersForEarsOrMouth() {
         List<Volunteer> volunteerList = new ArrayList<Volunteer>();
         for(int i = 0; i < 3; i++) {
-            if (searchVolunteerForEarsOrMouth() == null) {
+            Volunteer newVol = searchVolunteerForEarsOrMouth();
+            if ( newVol == null) {
                 break;
             }
-            volunteerList.add(searchVolunteerForEarsOrMouth());
+            volunteerList.add(newVol);
         }
         if (volunteerList.isEmpty()) {
             return null;
@@ -89,10 +91,11 @@ public class SearchVolunteer {
     public List<Volunteer> getVolunteersForFriend(String city) {
         List<Volunteer> volunteerList = new ArrayList<Volunteer>();
         for(int i = 0; i < 3; i++) {
-            if (searchVolunteerForFriend(city) == null) {
+            Volunteer newVol = searchVolunteerForFriend(city);
+            if (newVol == null) {
                 break;
             }
-            volunteerList.add(searchVolunteerForFriend(city));
+            volunteerList.add(newVol);
         }
         if (volunteerList.isEmpty()) {
             return null;
