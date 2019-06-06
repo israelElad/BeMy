@@ -26,6 +26,15 @@ public class Info {
         return instance;
     }
 
+    public Boolean isVolunteerExist(String phoneNumber){
+        for (int i = 0; i < volunteersList.size(); i++){
+            if (volunteersList.get(i).getPhoneNumber().equals(phoneNumber)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void addVolunteer(String name, String phoneNumber, Map<String, Boolean> availableFor, String city,
                              Map<Date, Date> availableWhen){
         Volunteer volunteer = new Volunteer(name, phoneNumber, availableFor, city, availableWhen);

@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile(this));*/
     }
 
+    /*@Override
+    protected void onDestroy()
+
+    }*/
+
     public void beMyClick(View view)
     {
         Intent intent = new Intent(MainActivity.this, beMyChoose.class);
