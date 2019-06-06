@@ -37,7 +37,6 @@
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="phone number"
-            android:inputType="phone"
             android:textAlignment="center"
             android:textSize="40dp" />
 
@@ -51,6 +50,7 @@
             android:layout_marginBottom="10dp"
             android:background="#410552"
             android:fontFamily="@font/baloo_paaji"
+            android:onClick="onContinueClick"
             android:padding="10dp"
             android:text="continue"
             android:textColor="#FFFFFF"
