@@ -44,9 +44,7 @@ public class Info {
         return null;
     }
 
-    public void addVolunteer(String name, String phoneNumber, Map<String, Boolean> availableFor, String city,
-                             Map<Date, Date> availableWhen){
-        Volunteer volunteer = new Volunteer(name, phoneNumber, availableFor, city, availableWhen);
+    public void addVolunteer(Volunteer volunteer){
         volunteersList.add(volunteer);
     }
 
