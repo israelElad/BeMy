@@ -27,7 +27,7 @@ public class chooseContactWay extends AppCompatActivity {
                     new String[]{Manifest.permission.CALL_PHONE}, 0);
         }
         else {
-            startService(callIntent);
+            startActivity(callIntent);
         }
     }
 

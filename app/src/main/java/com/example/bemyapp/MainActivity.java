@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         createNotificationChannel();
         setContentView(R.layout.activity_main);
@@ -58,9 +59,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
     public void beMyClick(View view)
     {
         Intent intent = new Intent(MainActivity.this, beMyChoose.class);
+        startActivity(intent);
+    }
+    public void beForClick(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, beFor.class);
         startActivity(intent);
     }
 }
