@@ -26,6 +26,21 @@
             android:textAlignment="center"
             android:textColor="#410552"
             android:textSize="50dp" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#410552"
+            android:fontFamily="@font/baloo_paaji"
+            android:onClick="backClick"
+            android:padding="10dp"
+            android:text="back"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

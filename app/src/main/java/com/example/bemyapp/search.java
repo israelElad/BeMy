@@ -33,8 +33,13 @@ public class search extends AppCompatActivity {
 // notificationId is a unique int for each notification that you must define
                 notificationManager.notify(1, builder.build());
                 Intent intent = new Intent(search.this, chooseContactWay.class);
+                intent.putExtra("name",volunteerList.get(0).getName());
+                intent.putExtra("phone",volunteerList.get(0).getPhoneNumber());
                 startActivity(intent);
             }
+            else {
+                Intent intent = new Intent(search.this, not_found.class);
+                startActivity(intent);}
         }else if(beMyWhat.equals("Ear")){
             volunteerList=searchVolunteer.getVolunteersForEarsOrMouth();
             if (volunteerList != null) {
@@ -50,10 +55,16 @@ public class search extends AppCompatActivity {
 // notificationId is a unique int for each notification that you must define
                 notificationManager.notify(1, builder.build());
                 Intent intent = new Intent(search.this, chooseContactWay.class);
+                intent.putExtra("name",volunteerList.get(0).getName());
+                intent.putExtra("phone",volunteerList.get(0).getPhoneNumber());
                 startActivity(intent);
             }
+            else {
+                Intent intent = new Intent(search.this, not_found.class);
+                startActivity(intent);}
         }else if(beMyWhat.equals("Leg")){
-            volunteerList=searchVolunteer.getVolunteersForLegs("Jerusalem");
+            String location =getIntent().getStringExtra("location");
+            volunteerList=searchVolunteer.getVolunteersForLegs(location);
             if (volunteerList != null) {
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "channel1")
                         .setSmallIcon(R.drawable.notification_icon)
@@ -67,10 +78,16 @@ public class search extends AppCompatActivity {
 // notificationId is a unique int for each notification that you must define
                 notificationManager.notify(1, builder.build());
                 Intent intent = new Intent(search.this, chooseContactWay.class);
+                intent.putExtra("name",volunteerList.get(0).getName());
+                intent.putExtra("phone",volunteerList.get(0).getPhoneNumber());
                 startActivity(intent);
             }
+            else {
+                Intent intent = new Intent(search.this, not_found.class);
+                startActivity(intent);}
         }else if(beMyWhat.equals("Friend")){
-            volunteerList=searchVolunteer.getVolunteersForFriend("Tel-Aviv");
+            String location =getIntent().getStringExtra("location");
+            volunteerList=searchVolunteer.getVolunteersForFriend(location);
             if (volunteerList != null) {
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "channel1")
                         .setSmallIcon(R.drawable.notification_icon)
@@ -84,8 +101,12 @@ public class search extends AppCompatActivity {
 // notificationId is a unique int for each notification that you must define
                 notificationManager.notify(1, builder.build());
                 Intent intent = new Intent(search.this, chooseContactWay.class);
+                intent.putExtra("name",volunteerList.get(0).getName());
+                intent.putExtra("phone",volunteerList.get(0).getPhoneNumber());
                 startActivity(intent);
-            }
+            }else {
+            Intent intent = new Intent(search.this, not_found.class);
+            startActivity(intent);}
         }else{
             System.out.println("beMy");
         }

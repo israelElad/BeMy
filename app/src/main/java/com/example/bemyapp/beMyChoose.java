@@ -15,7 +15,7 @@ public class beMyChoose extends AppCompatActivity {
 
     public void beMyFriendClick(View view)
     {
-        Intent intent = new Intent(beMyChoose.this, search.class);
+        Intent intent = new Intent(beMyChoose.this, fromWereToWere.class);
         intent.putExtra("BeMy","Friend");
         startActivity(intent);
     }
@@ -29,7 +29,7 @@ public class beMyChoose extends AppCompatActivity {
 
     public void beMyLegClick(View view)
     {
-        Intent intent = new Intent(beMyChoose.this, search.class);
+        Intent intent = new Intent(beMyChoose.this, fromWereToWere.class);
         intent.putExtra("BeMy","Leg");
         startActivity(intent);
     }

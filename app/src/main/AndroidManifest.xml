@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".registration_form"></activity>
+        <activity android:name=".not_found"></activity>
+        <activity android:name=".registration_form" />
         <activity android:name=".beFor" />
         <activity android:name=".register" />
         <activity android:name=".update" />
