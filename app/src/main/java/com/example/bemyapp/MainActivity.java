@@ -10,10 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-
+    VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onStop() {
+        //volunteerDataBase.WriteToFile();
+        super.onStop();
     }
 
     public void beMyClick(View view)
