@@ -43,4 +43,9 @@ public class conect extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    public void backClick(View view)
+    {
+        Intent intent = new Intent(conect.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

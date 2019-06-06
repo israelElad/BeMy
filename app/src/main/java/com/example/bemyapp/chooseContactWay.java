@@ -45,4 +45,9 @@ public class chooseContactWay extends AppCompatActivity {
         intent.putExtra("sms_body", "Can you please help me?");
         startActivity(intent);
     }
+    public void backClick(View view)
+    {
+        Intent intent = new Intent(chooseContactWay.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
