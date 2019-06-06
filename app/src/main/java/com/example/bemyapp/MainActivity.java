@@ -18,15 +18,17 @@ public class MainActivity extends AppCompatActivity {
         Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile());
 
         // narkis's check
-        /*VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
+        /*
         Map<String, Boolean> availableFor = new HashMap<>();
-        availableFor.put("callOrMessage", false);
-        availableFor.put("Mission", false);
+        availableFor.put("callOrMessage", true);
+        availableFor.put("Mission", true);
         Map<Date, Date> availableWhen = new HashMap<>();
-        availableWhen.put(volunteerDataBase.toDate("Wed Oct 16 00:00:00 PST 2013"), volunteerDataBase.toDate("Wed Oct 16 00:06:00 PST 2013"));
-        Info.getInstance().addVolunteer("Yael", "0544736473", availableFor, "Tel-Aviv", availableWhen);
-        volunteerDataBase.WriteToFile(this);
-        Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile(this));*/
+        availableWhen.put(volunteerDataBase.toDate("thu Oct 06 00:00:00 PST 2018"), volunteerDataBase.toDate("thu Oct 06 00:14:00 PST 2020"));
+        Info.getInstance().addVolunteer(new Volunteer("Yael", "0544736473", availableFor, "Tel-Aviv", availableWhen));
+        volunteerDataBase.WriteToFile();
+        Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile());
+        */
+
     }
 
     @Override
