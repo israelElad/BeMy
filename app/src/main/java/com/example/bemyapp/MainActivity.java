@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile(this));*/
     }
 
-    /*@Override
-    protected void onDestroy()
-
-    }*/
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 
     public void beMyClick(View view)
     {
