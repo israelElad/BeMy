@@ -43,4 +43,11 @@ public class conect extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    public void backClick(View view)
+    {
+        //String phone =getIntent().getStringExtra("phone");
+
+        Intent intent = new Intent(conect.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
