@@ -69,11 +69,11 @@
             android:text="Available at:"
             android:textSize="20dp" />
 
-        <CalendarView
-            android:id="@+id/calendarView2"
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp" />
+            android:text="TextView" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
