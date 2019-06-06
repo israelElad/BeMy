@@ -6,7 +6,6 @@ import android.content.Context;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,11 +17,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class VolunteerDataBase {
+    Context context;
+
     public VolunteerDataBase(Context context) {
-        CreateFile(context);
+        this.context = context;
+        CreateFile();
     }
 
     @SuppressLint("SimpleDateFormat")
@@ -42,9 +43,9 @@ public class VolunteerDataBase {
         return Arrays.asList(line.split("\\s*,\\s*"));
     }
 
-    private void CreateFile(Context context) {
+    private void CreateFile() {
         try {
-            File f = new File(context.getFilesDir(),"volunteers.txt");
+            File f = new File(this.context.getFilesDir(),"volunteers.txt");
             if (f.createNewFile()) {
                 System.out.println("File created: " + f.getName());
             } else {
@@ -56,9 +57,9 @@ public class VolunteerDataBase {
         }
     }
 
-    public void WriteToFile(Context context) {
+    public void WriteToFile() {
         try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("volunteers.txt", Context.MODE_PRIVATE));
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(this.context.openFileOutput("volunteers.txt", Context.MODE_PRIVATE));
             for (int i = 0; i < Info.getInstance().getVolunteersList().size(); i++){
                 outputStreamWriter.write(Info.getInstance().getVolunteersList().get(i).toString());
             }
@@ -69,11 +70,11 @@ public class VolunteerDataBase {
         }
     }
 
-    private List<String> ReadFromFile(Context context){
+    private List<String> ReadFromFile(){
         List<String> linesList = new ArrayList<String>();
         String receiveString = "";
         try {
-            InputStream inputStream = context.openFileInput("volunteers.txt");
+            InputStream inputStream = this.context.openFileInput("volunteers.txt");
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -99,9 +100,9 @@ public class VolunteerDataBase {
         return linesList;
     }
 
-    public List<Volunteer> loadFromFile(Context context) {
+    public List<Volunteer> loadFromFile() {
         List<Volunteer> volunteersList = new ArrayList<Volunteer>();
-        List<String> linesList = ReadFromFile(context);
+        List<String> linesList = ReadFromFile();
         for (int i = 0; i < linesList.size(); i++){
             List<String> line = parseLine(linesList.get(i));
             // availableFor
