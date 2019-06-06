@@ -15,15 +15,13 @@ public class conect extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(savedInstanceState);
         String name =getIntent().getStringExtra("name");
         String phone =getIntent().getStringExtra("phone");
+        setContentView(R.layout.activity_conect);
         TextView tvName = (TextView)findViewById(R.id.name);
         tvName.setText(name);
         TextView tvPhone = (TextView)findViewById(R.id.phone);
         tvPhone.setText(phone);
-        setContentView(R.layout.activity_choose_contact_way);
-        setContentView(R.layout.activity_conect);
     }
 
     public void initiateCall(View view) {

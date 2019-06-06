@@ -1,5 +1,6 @@
 package com.example.bemyapp;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,6 +13,13 @@ public class SearchVolunteer {
             return false;
         }
         Date now = new Date();
+        try {
+            now = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(now.toString());
+        }
+        catch (Exception e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         Map<Date, Date> schedual = volunteer.getAvailableWhen();
         for (Map.Entry<Date, Date> entry : schedual.entrySet()) {
             if (entry.getKey().before(now) && entry.getValue().after(now)) {

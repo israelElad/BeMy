@@ -17,11 +17,11 @@ public class chooseContactWay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         String name =getIntent().getStringExtra("name");
         String phone =getIntent().getStringExtra("phone");
+        setContentView(R.layout.activity_choose_contact_way);
         TextView tvName = (TextView)findViewById(R.id.name);
         tvName.setText(name);
         TextView tvPhone = (TextView)findViewById(R.id.phone);
         tvPhone.setText(phone);
-        setContentView(R.layout.activity_choose_contact_way);
     }
 
     public void initiateCall(View view) {

@@ -32,7 +32,7 @@ public class search extends AppCompatActivity {
 
 // notificationId is a unique int for each notification that you must define
                 notificationManager.notify(1, builder.build());
-                Intent intent = new Intent(search.this, chooseContactWay.class);
+                Intent intent = new Intent(search.this, conect.class);
                 intent.putExtra("name",volunteerList.get(0).getName());
                 intent.putExtra("phone",volunteerList.get(0).getPhoneNumber());
                 startActivity(intent);
