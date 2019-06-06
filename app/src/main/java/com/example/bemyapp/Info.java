@@ -44,6 +44,16 @@ public class Info {
         return null;
     }
 
+    public Volunteer getVolunteerForUpdating(String phoneNumber){
+        for (int i = 0; i < volunteersList.size(); i++){
+            if (volunteersList.get(i).getPhoneNumber().equals(phoneNumber)){
+                removeVolunteer(phoneNumber);
+                return volunteersList.get(i);
+            }
+        }
+        return null;
+    }
+
     public void addVolunteer(Volunteer volunteer){
         volunteersList.add(volunteer);
     }
