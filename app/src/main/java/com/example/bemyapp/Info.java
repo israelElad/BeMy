@@ -35,6 +35,15 @@ public class Info {
         return false;
     }
 
+    public Volunteer getVolunteer(String phoneNumber){
+        for (int i = 0; i < volunteersList.size(); i++){
+            if (volunteersList.get(i).getPhoneNumber().equals(phoneNumber)){
+                return volunteersList.get(i);
+            }
+        }
+        return null;
+    }
+
     public void addVolunteer(String name, String phoneNumber, Map<String, Boolean> availableFor, String city,
                              Map<Date, Date> availableWhen){
         Volunteer volunteer = new Volunteer(name, phoneNumber, availableFor, city, availableWhen);

@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // narkis's check
-        /*VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
+        /*
         Map<String, Boolean> availableFor = new HashMap<>();
         availableFor.put("callOrMessage", false);
         availableFor.put("Mission", false);
@@ -28,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
         Info.getInstance().setVolunteersList(volunteerDataBase.loadFromFile(this));*/
     }
 
-    /*@Override
-    protected void onDestroy()
-
-    }*/
+    @Override
+    public void onDestroy() {
+        volunteerDataBase.loadFromFile(this);
+        super.onDestroy();
+    }
 
     public void beMyClick(View view)
     {

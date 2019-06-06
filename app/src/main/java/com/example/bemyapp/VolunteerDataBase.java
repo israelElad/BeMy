@@ -69,7 +69,7 @@ public class VolunteerDataBase {
         }
     }
 
-    public List<String> ReadFromFile(Context context){
+    private List<String> ReadFromFile(Context context){
         List<String> linesList = new ArrayList<String>();
         String receiveString = "";
         try {
