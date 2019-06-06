@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, beMyChoose.class);
         startActivity(intent);
     }
+    public void beForClick(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, ---------.class);
+        startActivity(intent);
+    }
 }
