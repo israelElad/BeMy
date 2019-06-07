@@ -25,7 +25,7 @@
             android:fontFamily="@font/baloo_paaji"
             android:onClick="updateClick"
             android:padding="10dp"
-            android:text="Updata"
+            android:text="Update"
             android:textColor="#FFFFFF"
             android:textSize="40dp" />
 

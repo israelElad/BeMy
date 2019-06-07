@@ -14,6 +14,7 @@ public class conect extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         String name =getIntent().getStringExtra("name");
         String phone =getIntent().getStringExtra("phone");

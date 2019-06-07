@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         availableWhen.put(volunteerDataBase.toDate("Thu Jun 06 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 06 10:40:00 GMT 2019"));
         availableWhen.put(volunteerDataBase.toDate("Thu Jun 07 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 07 10:40:00 GMT 2019"));
         availableWhen.put(volunteerDataBase.toDate("Thu Jun 08 01:26:00 GMT 2019"), volunteerDataBase.toDate("Thu Jun 08 10:40:00 GMT 2019"));
-        Info.getInstance().addVolunteer(new Volunteer("Yael", "0544736473", availableFor, "Tel-Aviv", availableWhen));
+        Info.getInstance().addVolunteer(new Volunteer("Israel Israeli", "0545558181", availableFor, "Tel Aviv", availableWhen));
         /*
         // narkis's check
         VolunteerDataBase volunteerDataBase = new VolunteerDataBase(this);
